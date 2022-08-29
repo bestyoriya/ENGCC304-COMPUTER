@@ -8,30 +8,25 @@ int main(){
     scanf( "%d", &size ) ;
     int array_N[ 10 ] ;
     int unique[ 10 ] ;
-    for (i = 0 ; i < size ; i++)
-    {
+    for (i = 0 ; i < size ; i++){
     	printf( "Array[%d] : ", i ) ;
         scanf( "%d" ,&array_N[i]) ;
     }
-    for ( j = 0 ; j < size ; j++)
-    {
-        for ( k = 0; k < size; k++)
-        {
+    for ( j = 0 ; j < size ; j++){
+        for ( k = 0; k < size; k++){
             if ( array_N[j] == array_N[k] )
                 {
                     N++ ;
                 }
         }
-        if (N == 1) 
-        {
+        if (N == 1) {
             unique[ locat ] = array_N[j] ;
             locat++ ;
         }
         N = 0 ;
     }
     printf( "Unique =" ) ;
-    for ( m = 0; m < locat; m++)
-    {
+    for ( m = 0; m < locat; m++){
         printf( " %d", unique[m] );
     }
-}
+}//end function

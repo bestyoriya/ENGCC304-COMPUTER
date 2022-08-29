@@ -9,26 +9,22 @@ int main(){
     int array_N[ size ] ;
     int unique[ size ] ;
     i = 0 ;
-    while ( i < size )
-    {
+    while ( i < size ){
     	printf( "Array[%d] : ", i ) ;
         scanf( "%d" ,&array_N[i]) ; 
         i++ ;
     }
     j = 0 ;
-    while (  j < size  )
-    {
+    while (  j < size  ){
         k = 0 ;
-        while (  k < size)
-        {
+        while (  k < size){
             if ( array_N[j] == array_N[k] )
                 {
                     N++ ;
                 } 
             k++;
         }
-        if (N == 1) 
-        {
+        if (N == 1) {
             unique[ locat ] = array_N[j] ;
             locat++ ;
         }
@@ -37,9 +33,8 @@ int main(){
     }
     printf( "Unique =" ) ;
     m = 0 ;
-    while (m < locat)
-    {
+    while (m < locat){
         printf( " %d", unique[m] ); 
         m++;
     }
-}
+}//end function
