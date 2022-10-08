@@ -1,3 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+struct Birthday {
+	int number ; //person's number
+	char name[100] ; //person's name
+	int  dailylife ; //person's dailylife
+	int  day ; // person's day
+	int  month ; // person's month
+	int  years ; // person's years
+}typedef bir ; //keyword
+
 int input_data ( bir[] ) ; //collect data
 void output_data ( bir[], int ) ; //show result or output
 void maxmin_age  ( bir[], int ) ; //maxmin_age to structure
@@ -19,6 +32,7 @@ int input_data ( bir person[] ) {
 	fpn = fopen( "a.txt" , "r" ) ; //read file
 	if ( fpn == NULL ) {
 		printf ( " Error in open file " ) ; 
+		exit ( 0 ) ;	
 	}//end if
 	
 	fscanf ( fpn, "%s\t%s\t\t%s\n", section, section, section ) ; //Created to read data from a file
